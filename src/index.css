@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Sarabun&display=swap');
+
+*{
+  font-family: 'Sarabun', sans-serif;
+}
+h1{
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 500ms ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer base {
+  li {
+    @apply p-4
+  }
+
+  button {
+    @apply text-white border bg-indigo-600 border-orange-600
+    hover:bg-orange-400 hover:text-gray-600 rounded-md
+  }
+}
